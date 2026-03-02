@@ -25,8 +25,7 @@
 ### What's Protected ✅
 
 | Feature | Description |
-|---------|-------------|
-| **Client-Side Encryption** | Messages are encrypted before leaving your device |
+|---------|-------------|
 | **No Account Required** | No personal data is collected or stored |
 | **No IP Tracking** | User IP addresses are not logged |
 | **Ephemeral Messages** | Messages exist only in memory during active session |
