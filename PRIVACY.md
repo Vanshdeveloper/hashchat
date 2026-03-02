@@ -35,8 +35,7 @@ HashChat is designed with privacy as the core principle. Here's what you get:
 
 | Feature | Description |
 |---------|-------------|
-| **Storage** | Messages exist only in your browser's memory |
-| **Encryption** | Messages are encrypted before transmission |
+| **Storage** | Messages exist only in your browser's memory |
 | **Deletion** | All messages are deleted when you close the tab |
 | **Server** | No message history is stored anywhere |
 
