@@ -38,12 +38,12 @@ Works seamlessly on desktop and mobile browsers.
 
 ```
 ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│  1. Generate │────▶│  2. Invite │────▶│  3. Vanish  │
+│  1. Generate.        │────▶│  2. Invite        │────▶│  3. Vanish        │
 └─────────────┘     └─────────────┘     └─────────────┘
-       │                   │                   │
-       ▼                   ▼                   ▼
-  Create unique      Share the link      Messages are
-  7-char hash        with friends        deleted forever
+       │                                │                              │
+       ▼                                ▼                              ▼
+  Create unique                   Share the link                   Messages are
+  7-char hash                      with friends                  deleted forever
 ```
 
 ### The Workflow
