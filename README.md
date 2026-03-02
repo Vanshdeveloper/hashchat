@@ -21,10 +21,7 @@
 ## 🔥 Features
 
 ### 🗑️ Zero Trace
-Messages exist only in memory — closing the tab purges them instantly. No server logs, no history, no evidence.
-
-### 🔐 Client-Side Encryption
-Data is encrypted before leaving your device. End-to-end encryption ensures only participants can read messages.
+Messages exist only in memory — closing the tab purges them instantly. No server logs, no history, no evidence.
 
 ### 👤 Truly Anonymous
 No email, no phone numbers, no IP tracking. No accounts to create. Just pure, untraceable communication.
