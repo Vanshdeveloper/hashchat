@@ -25,11 +25,13 @@
 ### What's Protected ✅
 
 | Feature | Description |
-|---------|-------------|
+|---------|-------------|
+| **End-to-End Encryption** | Messages are encrypted on your device before transmission - only participants with the room link can decrypt them |
 | **No Account Required** | No personal data is collected or stored |
 | **No IP Tracking** | User IP addresses are not logged |
 | **Ephemeral Messages** | Messages exist only in memory during active session |
 | **Unique Room Hashes** | Each chat room uses a unique 7-character identifier |
+| **Firebase Cannot Read** | Even Firebase servers cannot decrypt your message contents |
 
 ### What's NOT Protected ❌
 

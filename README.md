@@ -21,7 +21,10 @@
 ## 🔥 Features
 
 ### 🗑️ Zero Trace
-Messages exist only in memory — closing the tab purges them instantly. No server logs, no history, no evidence.
+Messages exist only in memory — closing the tab purges them instantly. No server logs, no history, no evidence.
+
+### 🔐 End-to-End Encryption
+Data is encrypted before leaving your device. End-to-end encryption ensures only participants with the room link can read messages. Even Firebase cannot decrypt the message contents.
 
 ### 👤 Truly Anonymous
 No email, no phone numbers, no IP tracking. No accounts to create. Just pure, untraceable communication.
@@ -38,12 +41,12 @@ Works seamlessly on desktop and mobile browsers.
 
 ```
 ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│  1. Generate.        │────▶│  2. Invite        │────▶│  3. Vanish        │
+│  1. Generate │────▶│  2. Invite │────▶│  3. Vanish  │
 └─────────────┘     └─────────────┘     └─────────────┘
-       │                                │                              │
-       ▼                                ▼                              ▼
-  Create unique                   Share the link                   Messages are
-  7-char hash                      with friends                  deleted forever
+       │                   │                   │
+       ▼                   ▼                   ▼
+  Create unique      Share the link      Messages are
+  7-char hash        with friends        deleted forever
 ```
 
 ### The Workflow
@@ -152,10 +155,12 @@ hashchat/
 
 ## 🔐 Security Notes
 
-- Messages are stored in Firebase Realtime Database
+- Messages are end-to-end encrypted before being stored in Firebase Realtime Database
 - Each room has a unique hash that acts as the room ID
+- The encryption key is derived from the room URL - only those with the link can decrypt messages
 - No user authentication — anyone with the link can join
 - Messages are removed from memory when the tab is closed
+- Even Firebase cannot read your message contents - they are stored as encrypted data
 - For production use, consider implementing additional security rules in Firebase
 
 ---

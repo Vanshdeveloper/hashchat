@@ -57,6 +57,7 @@ As a user, you agree to:
 - **No Accounts**: We don't store personal data
 - **No Logging**: IP addresses are not tracked
 - **Ephemeral Data**: Messages exist only during active sessions
+- **End-to-End Encryption**: Messages are encrypted on your device before transmission. Only participants with the room link can decrypt and read messages. Even we cannot access your conversations.
 - **Your Privacy**: See our [SECURITY.md](./SECURITY.md) for details
 
 ### 6. Service Availability

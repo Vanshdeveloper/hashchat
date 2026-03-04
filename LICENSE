@@ -28,13 +28,15 @@ BY USING THIS SOFTWARE, YOU AGREE TO THE FOLLOWING:
 
 1. **No Warranty**: This software is provided "AS IS" without any warranties, express or implied.
 
-2. **Use at Your Own Risk**: The developer(s) shall not be liable for any damages, data loss, privacy breaches, or security issues arising from the use of this software.
+2. **End-to-End Encryption**: HashChat implements end-to-end encryption (E2EE). Messages are encrypted on the sender's device and can only be decrypted by intended recipients. However, no encryption system is 100% foolproof.
 
-3. **Intended Use**: This software is intended for lawful, ethical purposes only. Any illegal use is strictly prohibited.
+3. **Use at Your Own Risk**: The developer(s) shall not be liable for any damages, data loss, privacy breaches, or security issues arising from the use of this software.
 
-4. **Security**: While HashChat implements privacy features, no system is 100% secure. Users should exercise caution and not share sensitive information.
+4. **Intended Use**: This software is intended for lawful, ethical purposes only. Any illegal use is strictly prohibited.
 
-5. **Third-Party Services**: This software uses Firebase services which have their own terms of service and privacy policies.
+5. **Security**: While HashChat implements end-to-end encryption and privacy features, no system is 100% secure. Users should exercise caution and not share sensitive information they cannot afford to lose.
+
+6. **Third-Party Services**: This software uses Firebase services which have their own terms of service and privacy policies. Firebase serves as the transport layer but cannot read encrypted message contents.
 
 ---
 

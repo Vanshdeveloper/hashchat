@@ -17,14 +17,15 @@
 
 ### What is HashChat?
 
-HashChat is a **private, anonymous chat application** that allows users to create instant chat rooms without any registration. Messages are not end-to-end encrypted and disappear when the chat is closed.
+HashChat is a **private, anonymous chat application** that allows users to create instant chat rooms without any registration. Messages are encrypted end-to-end and disappear when the chat is closed.
 
 ### Key Highlights
 
 | Feature | Description |
 |---------|-------------|
 | 🔒 **No Registration** | Use instantly without creating an account |
-| 🗑️ **Self-Destructing** | Messages vanish when you close the tab |
+| 🗑️ **Self-Destructing** | Messages vanish when you close the tab |
+| 🔐 **E2E Encryption** | Only participants can read messages |
 | ⚡ **Instant Rooms** | Generate a link and start chatting in seconds |
 
 ---
@@ -92,7 +93,7 @@ User A (Creator)                    User B (Joiner)
 [User types message]
         │
         ▼
-[Encrypt with sender ID]
+[Encrypt with sender ID - End-to-End Encryption]
         │
         ▼
 [Push to Firebase: rooms/{roomId}/messages]
@@ -112,15 +113,20 @@ User A (Creator)                    User B (Joiner)
 - Messages exist only in browser memory
 - Closing the tab removes all messages
 - No server-side message history
-- No database persistence
+- No database persistence
 
-### 2. Truly Anonymous
+### 2. Client-Side End-to-End Encryption
+- Messages encrypted before transmission
+- Only users with the room link can decrypt
+- Firebase cannot read message contents
+
+### 3. Truly Anonymous
 - No email verification
 - No phone number required
 - No IP logging
 - Randomly generated user IDs
 
-### 3. Room Management
+### 4. Room Management
 - **Auto-delete**: Room data removed on disconnect
 - **No password**: Link IS the access credential
 - **No admin panel**: All management via URL
@@ -326,6 +332,9 @@ localStorage.setItem('debug', 'true');
 
 ### Q: Can I recover deleted messages?
 **A:** No. Once the tab is closed or you leave the room, all messages are permanently deleted.
+
+### Q: Is this end-to-end encrypted?
+**A:** Yes, messages are encrypted client-side before being sent to Firebase. Only users with the room link can decrypt them.
 
 ### Q: Can I use HashChat for business?
 **A:** Yes, but with caution. This is designed for casual, private conversations. For sensitive business communications, use dedicated encrypted messaging platforms.
