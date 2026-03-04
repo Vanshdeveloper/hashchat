@@ -1,39 +1,37 @@
 <div align="center">
 
-# 🔒 HashChat
+# 🔒 HashChat | End-to-End Encrypted Anonymous Chat App
 
-### Private Anonymous Chat - Where Conversations Disappear
+### Serverless, No-Login, Ephemeral Messaging built with Web Crypto API
 
 [![License](https://img.shields.io/badge/license-MIT-purple.svg)](./LICENSE)
 [![Firebase](https://img.shields.io/badge/Firebase-10.8.1-orange)](https://firebase.google.com)
-[![Status](https://img.shields.io/badge/status-active-success)](https://hashchat.room)
+[![Encryption](https://img.shields.io/badge/Encryption-AES--GCM-brightgreen)](#)
+[![Status](https://img.shields.io/badge/status-active-success)](https://vanshdeveloper.github.io/hashchat)
 
-*Instant, anonymous rooms. No history. No traces. Just clear, secure communication that disappears when you're done.*
+*A privacy-first, zero-setup burner chat application. Generate an instant room, share the encrypted link, and communicate securely. When the tab closes, the history vanishes forever.*
 
 ---
 
-[Demo](https://vanshdeveloper.github.io/hashchat) • [Features](#-features) • [How It Works](#-how-it-works) • [Tech Stack](#-tech-stack) • [Setup](#-setup)
+[Live Demo](https://vanshdeveloper.github.io/hashchat) • [Features](#-key-features) • [How It Works](#-how-it-works) • [Tech Stack](#-tech-stack) • [Setup](#-setup)
 
 </div>
 
 ---
 
-## 🔥 Features
+## 🔥 Key Features
 
-### 🗑️ Zero Trace
-Messages exist only in memory — closing the tab purges them instantly. No server logs, no history, no evidence.
+### 🔐 True End-to-End Encryption (E2EE)
+Messages are locked using the browser's native **Web Crypto API (AES-GCM)** before they ever leave your device. The room's URL hash acts as the cryptographic key. Even the database administrator (or Firebase) only sees randomized gibberish.
 
-### 🔐 End-to-End Encryption
-Data is encrypted before leaving your device. End-to-end encryption ensures only participants with the room link can read messages. Even Firebase cannot decrypt the message contents.
+### 🗑️ Ephemeral & Burner-Ready (Zero Trace)
+Designed for pure, untraceable communication. Messages are completely ephemeral—they exist only in memory. Closing the browser tab instantly purges the chat. No server logs, no database history, no evidence.
 
-### 👤 Truly Anonymous
-No email, no phone numbers, no IP tracking. No accounts to create. Just pure, untraceable communication.
+### 👤 100% Anonymous (No Login Required)
+No emails, no phone numbers, no OAuth, and no IP logging. Just click generate and start typing.
 
-### ⚡ Instant Rooms
-Generate a unique private link and start chatting immediately. No waiting, no setup.
-
-### 📱 Cross-Platform
-Works seamlessly on desktop and mobile browsers.
+### ⚡ Real-Time Serverless Architecture
+Powered by Firebase Realtime Database for instantaneous WebSocket message delivery without the need to maintain a traditional backend server.
 
 ---
 
@@ -41,21 +39,13 @@ Works seamlessly on desktop and mobile browsers.
 
 ```
 ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│  1. Generate │────▶│  2. Invite │────▶│  3. Vanish  │
+│ 1. Generate  │────▶│  2. Invite │────▶│  3. Vanish │
 └─────────────┘     └─────────────┘     └─────────────┘
        │                   │                   │
        ▼                   ▼                   ▼
-  Create unique      Share the link      Messages are
-  7-char hash        with friends        deleted forever
+  Create unique      Share the hash      Close tab &
+  AES-GCM Key        with your peer      messages vanish
 ```
-
-### The Workflow
-
-| Step | Action | Description |
-|------|--------|-------------|
-| **1** | Generate | Click "Generate Private Link" to create a unique 7-character hash |
-| **2** | Invite | Share the link with your friend — only those with the link can join |
-| **3** | Vanish | When done, simply leave the chat. It's deleted immediately. |
 
 ---
 
@@ -80,61 +70,53 @@ Works seamlessly on desktop and mobile browsers.
 ### Installation
 
 1. **Clone the repository**
-   
-```
-bash
-   git clone https://github.com/yourusername/hashchat.git
-   cd hashchat
-   
+
+```bash
+git clone https://github.com/yourusername/hashchat.git
+cd hashchat
 ```
 
 2. **Configure Firebase**
-   
+
    - Create a project at [Firebase Console](https://console.firebase.google.com)
    - Enable **Realtime Database**
    - Copy your Firebase config:
-   
-```
-javascript
-   const firebaseConfig = {
-     apiKey: "YOUR_API_KEY",
-     authDomain: "YOUR_PROJECT.firebaseapp.com",
-     projectId: "YOUR_PROJECT_ID",
-     storageBucket: "YOUR_PROJECT.appspot.com",
-     messagingSenderId: "YOUR_SENDER_ID",
-     appId: "YOUR_APP_ID"
-   };
-   
+
+```javascript
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
 ```
 
 3. **Update the config**
-   
+
    Open `index.html` and replace the Firebase config with your own:
-   
-```
-javascript
-   const firebaseConfig = {
-       // Your config here
-   };
-   
+
+```javascript
+const firebaseConfig = {
+    // Your config here
+};
 ```
 
 4. **Run locally**
-   
+
    Simply open `index.html` in your browser, or use a local server:
-   
-```
-bash
-   # Using Python
-   python -m http.server 8000
-   
-   # Using Node.js
-   npx serve
-   
+
+```bash
+# Using Python
+python -m http.server 8000
+
+# Using Node.js
+npx serve
 ```
 
 5. **Deploy**
-   
+
    Deploy to any static hosting service:
    - [Vercel](https://vercel.com)
    - [Netlify](https://netlify.com)
@@ -147,8 +129,9 @@ bash
 ```
 hashchat/
 ├── index.html         # Main HTML file with all structure
-├── stylesheet.css     # All styling (dark theme, animations)
-└── README.md          # This file
+├── script.js         # JavaScript logic (encryption, Firebase, chat)
+├── stylesheet.css    # All styling (dark theme, animations)
+└── README.md         # This file
 ```
 
 ---
@@ -198,3 +181,4 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 *HashChat — When you're done, it's gone.*
 
 </div>
+

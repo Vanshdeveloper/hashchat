@@ -161,10 +161,13 @@ User A (Creator)                    User B (Joiner)
 HashChat/
 ├── index.html          # Main application file
 ├── stylesheet.css      # All styling
+├── script.js           # JavaScript logic (encryption, Firebase)
 ├── README.md           # Project overview
 ├── SECURITY.md         # Security policy
-├── DOCS.md            # This file
-└── .gitignore         # Git config
+├── PRIVACY.md          # Privacy policy
+├── TERMS.md            # Terms of service
+├── DOCS.md             # This file
+└── LICENSE             # MIT License
 ```
 
 ### Data Structure
