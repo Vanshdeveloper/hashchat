@@ -216,26 +216,6 @@ nav {
     color: var(--text-primary);
 }
 
-.mobile-sign-in-btn {
-    margin-top: 24px;
-    padding: 14px 24px;
-    background: var(--accent-purple);
-    color: white;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    text-align: center;
-}
-
-.mobile-sign-in-btn:hover {
-    background: var(--accent-purple-light);
-    box-shadow: 0 0 20px rgba(140, 37, 244, 0.4);
-}
-
 /* Hero Section */
 .hero {
     text-align: center;
